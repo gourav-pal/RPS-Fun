@@ -22,11 +22,13 @@
     </button>
 
     <script>
-      let score = JSON.parse(localStorage.getItem('score'));// for first time user, there would be no local storage hence it will read null
+      let score = JSON.parse(localStorage.getItem('score')) ||{ Ties: 0, wins: 0, losses: 0 };// for first time user, there would be no local storage hence it will read null
+
+      /*
       if (!score) {
         score = { Ties: 0, wins: 0, losses: 0 };  //initailizing with 0 so that if there is no localStorage it takes 0
       }
-
+        */
       console.log();
 
       function playGame(playerMove) {
