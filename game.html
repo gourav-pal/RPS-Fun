@@ -11,11 +11,12 @@
     <button onclick="playGame('rock')">Rock</button>
     <button onclick="playGame('paper')">Paper</button>
     <button onclick="playGame('Scissors')">Scissors</button>
+    <p class="js-score" onclick=" ">
+
+    </p>
     <button
       onclick="
-      score.Ties=0;
-      score.wins=0;
-      score.losses=0;
+     resetScore();
     "
     >
       Reset Score
@@ -23,13 +24,27 @@
 
     <script>
       let score = JSON.parse(localStorage.getItem('score')) ||{ Ties: 0, wins: 0, losses: 0 };// for first time user, there would be no local storage hence it will read null
-
+      updateScore();
       /*
       if (!score) {
         score = { Ties: 0, wins: 0, losses: 0 };  //initailizing with 0 so that if there is no localStorage it takes 0
       }
         */
-      console.log();
+      
+
+      function resetScore() {
+        score.Ties = 0;
+        score.wins = 0;
+        score.losses = 0;
+        localStorage.setItem('score', JSON.stringify(score));
+        updateScore();
+      }
+
+      function updateScore() {
+        document.querySelector('.js-score')
+        .innerHTML=`Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.Ties}` 
+          
+      }
 
       function playGame(playerMove) {
         let result = "";
@@ -69,6 +84,9 @@
         }
 
         localStorage.setItem("score", JSON.stringify(score));
+
+        document.querySelector('.js-score')
+        .innerHTML=`Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.Ties}`
 
         alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
         Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.Ties}
