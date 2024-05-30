@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <button class="head" onclick="selected('heads')">Heads</button>
+    <button class="tail" onclick="selected('tails')">Tails</button>
+    <p class="result"></p>
+    <input class="name-input" placeholder="Enter Name" onkeydown="pressEnter(Event)" >  <button onclick="onSubmit()">Submit</button>
+    <p class="output"></p>
+    <script>
+       
+      function pressEnter(Event){
+          if(event.key=='Enter'){
+            let val=document.querySelector('.name-input')
+            document.querySelector('.output').innerHTML=`Your Name is : ${val.value}`
+          }
+      }
+
+      function selected(str){
+        console.log(str);
+        document.querySelector('.result').innerHTML=`You Chose: ${str}`
+     }
+     function onSubmit(){
+      let val=document.querySelector('.name-input')
+      document.querySelector('.output').innerHTML=`Your Name is : ${val.value}`
+
+     }
+    </script>
+  </body>
+</html>
