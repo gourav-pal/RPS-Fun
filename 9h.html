@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Input Value</title>
+</head>
+<body>
+    <input class="IP" onkeyup="displayInputValue()">
+    <p class="OP"></p>
+    
+    <script>
+        function displayInputValue() {
+            // Get the input element
+            var inputElement = document.querySelector('.IP');
+
+            // Get the value of the input box
+            var inputValue = inputElement.value;
+
+            // Display the input value in the paragraph
+            document.querySelector('.OP').textContent = 'Input Value: ' + inputValue;
+        }
+    </script>
+</body>
+</html>
