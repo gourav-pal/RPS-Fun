@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .not-toggled {
+        padding: 30px 25px;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .is-toggle {
+        padding: 30px 25px;
+        font-size: 15px;
+        font-weight: bold;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="not-toggled button-1" onclick=" toggle('.button-1')">
+      Gaming
+    </button>
+    <button class="not-toggled button-2" onclick=" toggle('.button-2')">
+      Music
+    </button>
+    <button class="not-toggled button-3" onclick=" toggle('.button-3')">
+      Tech
+    </button>
+
+    <script>
+      let currentToggle = null;
+
+      function toggle(slector) {
+        if (currentToggle !== null) {
+          document.querySelector(currentToggle).classList.remove("is-toggle");
+        }
+        document.querySelector(slector).classList.toggle("is-toggle");
+        console.log(document.querySelector('.is-toggled'));
+        currentToggle = slector;
+      }
+    </script>
+  </body>
+</html>

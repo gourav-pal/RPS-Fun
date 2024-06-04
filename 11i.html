@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        
+        const num=2;
+        const arr=[-2, -5, 10];
+        const arr1=[10,2,99];
+        const arr2=[22,33,23];
+        addNum(arr,num)
+        addArray(arr1,arr2);
+        function addNum(aray, num){
+            
+            for(let i=0;i<aray.length;i++){
+                let val=0;
+                val=aray[i] + num;
+                aray[i]=val;
+            }
+            console.log(aray);
+        }
+
+        function addArray(arr1,arr2){
+            let ans=[];
+            for(let i=0;i<arr1.length;i++){
+                let val=arr1[i]+arr2[i];
+                ans.push(val);
+                
+            }
+            console.log(ans);
+            
+        }
+    </script>
+</body>
+</html>

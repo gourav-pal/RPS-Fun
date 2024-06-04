@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        const arr=[];
+        let min=9999;
+        let max=-9999;
+        if(arr.length===1){
+            min=arr[0];
+            max=arr[0];
+        }
+        else if(arr.length===0){
+            min=null;
+            max=null;
+        }
+        else{
+
+            for(let i=0;i<arr.length;i++){
+                if(arr[i]>max){
+                    max=arr[i];
+                }
+                if(arr[i]<min){
+                    min=arr[i];
+                }
+            }
+           
+        }
+        const ans={
+                min,
+                max
+            }
+        console.log(ans);
+    </script>
+</body>
+</html>

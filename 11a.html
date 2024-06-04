@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        const ar=[1,2,4,5]
+        console.log(ar[ar.length-1]);
+        ar[ar.length-1]=99;
+        console.log(ar);
+        var temp;
+        temp=ar[0];
+        ar[0]=ar[ar.length-1];
+        ar[ar.length-1]=temp;
+        console.log(ar);
+    </script>
+</body>
+</html>
