@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game</title>
+  </head>
+  <body>
+    <style>
+      body {
+        background-color: rgb(25, 25, 25);
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .title {
+        font-size: 30px;
+        font-weight: bold;
+      }
+
+      .move-icon {
+        height: 70px;
+      }
+
+      .move-button {
+        background: transparent;
+        border: 3px solid white;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+
+      .js-result {
+        font-size: 22px;
+        font-weight: bold;
+      }
+    </style>
+    <p class="title">Rock Paaper Scissors</p>
+
+    <button  class="move-button js-rock-button">
+      <img class="move-icon" src="images/rock-emoji.png" />
+    </button>
+    <button  class="move-button js-paper-button">
+      <img class="move-icon" src="images/paper-emoji.png" />
+    </button>
+    <button  class="move-button js-scissors-button">
+      <img class="move-icon" src="images/scissors-emoji.png" />
+    </button>
+    <p class="js-result"></p>
+    <p class="js-move"></p>
+    <p class="js-score" onclick=" "></p>
+    <button
+    class="js-reset"
+      >
+      Reset Score
+    </button>
+    <button class="js-autoplay">Autoplay</button>
+    <script src="12-game.js"></script>
+  </body>
+</html>
