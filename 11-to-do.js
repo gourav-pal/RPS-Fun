@@ -1,9 +1,11 @@
-    const toDo=[{ 
+    const toDo=JSON.parse(localStorage.getItem('todoList')) || [{ 
         name:null,
         duedate:null
     }];
 
-    toDo.pop();
+    renderToDo();
+
+    
 
     function renderToDo(){
         let ToDoListHtml='';
@@ -17,11 +19,12 @@
             <button class="delete-button" onclick="
             toDo.splice(${i},1);
             renderToDo();
-            ">  Delete</button
-            </div>`
+            ">  Delete</button>
+            `
             ToDoListHtml+=html;
         }
         document.querySelector('.disp-toDo').innerHTML=ToDoListHtml;
+        
     }
 
 
@@ -37,4 +40,10 @@
         console.log(toDo);
         renderToDo();
         inputElement.value='';
+        renderToDo();
+        saveToStorage();
     }
+
+    function saveToStorage() {
+        localStorage.setItem('todoList', JSON.stringify(toDo));
+      }

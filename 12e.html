@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="js-button" onclick="display()">Add to Cart</button>
+    <p class="js-disp"></p>
+
+    <script>
+        let intervlId;
+
+        function display(){
+            document.querySelector('.js-disp').innerHTML='Added';
+
+            clearTimeout(intervlId);
+            
+            intervlId=setTimeout(function(){
+                document.querySelector('.js-disp').innerHTML=' ';
+                
+            },2000);
+            
+        }
+    </script>
+</body>
+</html>
