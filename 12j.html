@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function positiveInt(arr){
+            let ans=0;
+            arr.forEach(arr => {
+                if(arr>0){
+                    ans+=1;
+                }
+            });
+            return ans;
+        }
+        console.log(positiveInt([2,-1,-3,3,4,5]));
+    </script>
+</body>
+</html>

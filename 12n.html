@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function removeEggs(foods){
+           return foods.filter((value)=>{
+                return (value!=='egg')
+            })
+        }
+        foods=['egg','egg','fruit','veg','egg','egg','rice'];
+        newar=removeEggs(foods);
+        console.log(newar);
+
+        function updatedRemoveEggs(foods) {
+            let count=0;
+            return foods.filter((value)=>{
+                if(value==='egg'){
+                    count+=1;
+                    if(count>2){
+                        return true;
+                    }else{
+                        return false;
+                    }
+                }
+                else return true;
+                
+                
+                
+            })
+        }
+
+        console.log(updatedRemoveEggs(foods));
+    </script>
+</body>
+</html>
